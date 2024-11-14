@@ -1,27 +1,45 @@
+/* Container */
 .container {
-    width: 80%;
+    width: 85%;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
+/* Main Content */
 .main-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 20px;
+    gap: 20px;
+    margin-top: 30px;
+    justify-content: space-around;
 }
 
-.descricao {
-    width: 48%;
+/* Descrição Section */
+.descricao,
+.foto,
+.recommendations,
+.video-container {
+    width: calc(50% - 10px);
     background-color: #fff;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
 }
 
+.descricao:hover,
+.foto:hover,
+.recommendations:hover,
+.video-container:hover {
+    transform: scale(1.02);
+}
+
+/* Foto Section */
 .foto {
-    width: 48%;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
@@ -29,57 +47,65 @@
     width: 100%;
     max-width: 250px;
     border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.music-links, .video-links {
+/* Music & Video Links */
+.music-links,
+.video-links {
     margin-top: 20px;
 }
 
+/* Anchor */
 .anchor {
     display: inline-block;
     margin: 10px;
     text-align: center;
+    transition: transform 0.3s;
+}
+
+.anchor:hover {
+    transform: translateY(-5px);
 }
 
 .anchor img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .anchor a {
     display: block;
-    color: black;
+    color: #333;
     text-decoration: none;
+    font-weight: 600;
     margin-top: 10px;
 }
 
-.video-container {
-    width: 48%;
-    margin-bottom: 60px;
+.anchor a:hover {
+    color: #007bff;
 }
 
-iframe {
+/* Video Container */
+.video-container iframe {
     width: 100%;
-    height: 200px;
-    border: none;
+    height: 250px;
+    border-radius: 8px;
 }
 
+/* Footer */
 .footer {
-    background-color: black;
-    color: white;
+    background-color: #333;
+    color: #f9f9f9;
     text-align: center;
-    padding: 10px 0;
+    padding: 15px 0;
+    font-size: 0.9rem;
     margin-top: 40px;
+    border-top: 1px solid #444;
 }
 
-.recommendations {
-    width: 48%;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
+/* Recommendations */
 .recommendations ul {
     list-style-type: none;
     padding: 0;
@@ -87,10 +113,11 @@ iframe {
 
 .recommendations li {
     margin: 10px 0;
+    font-weight: 500;
 }
 
 .recommendations a {
-    color: black;
+    color: #007bff;
     text-decoration: none;
 }
 
